@@ -2,10 +2,10 @@
 LLMs demonstrate advanced knowledge retrieval and language reasoning capabilities. However, the integrity of their generation is not guaranteed due to their tendency to hallucinate <br>
 <br>
 <b>Objective</b> <br>
-Developing an decoding mechanism that can quantify LLMs confidence by steering its generation away from its greedy answer. <br>
+Developing a decoding mechanism that can quantify LLM's confidence by steering its generation away from its greedy answer. <br>
 <br>
 <b>Approach</b> <br>
-1- Developing a decoding strategy that divert LLM generation away from a previous answer. <br>
-2- Developing a semantic similarity algorithm that compare generated text with an previous answer.<br>
-3- Developing a machine learning models that that quantifies the difficulty of steering the LLM away from its greedy answer.<br>
+1- Developing a decoding strategy that diverts LLM generation from a previous answer. <br>
+2- Developing a semantic similarity algorithm that compares generated text with a previous answer.<br>
+3- Developing a machine learning model that that quantifies the difficulty of steering the LLM away from its greedy answer.<br>
  
