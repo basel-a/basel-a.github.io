@@ -9,3 +9,6 @@ Develop a tool that generates dynamic challenge questions from conversation hist
 2- Fine-tune a transformer language model on an email corpus to extract rich features<br>
 3- Extract various natural language features that are associated with the criteria<br>
 4- Train deep learning models that generates challenge questions<br>
+<br>
+<b>Publications</b><br>
+Abdeen, B., Al-Shaer, E., & Shadid, W. (2023, October). VeriActor: Dynamic Generation of Challenge-Response Questions for Enhanced Email Sender Verification. In 2023 IEEE Conference on Communications and Network Security (CNS) (pp. 1-9). IEEE.
