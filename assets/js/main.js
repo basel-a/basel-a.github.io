@@ -306,6 +306,13 @@ fetch('projects/malware_c/des.txt')
   })
   .catch(error => console.error('Error fetching file:', error));
   
+ fetch('projects/other/des.txt')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('other_des').innerHTML  = data;
+  })
+  .catch(error => console.error('Error fetching file:', error));
+ 
 // fetch('projects/attack_e/des.txt')
   // .then(response => response.text())
   // .then(data => {
