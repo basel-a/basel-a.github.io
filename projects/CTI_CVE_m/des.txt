@@ -7,12 +7,6 @@ Mapping CVE and CTI reports to ATT&CK enriches them with additional context, acc
 <b>Objective</b><br>
 Build a tool that automatically maps CVE and CTI reports to appropriate ATT&CK techniques.<br>
 <br>
-<b>Challenges</b><br>
-1- Complexity of CVE and CTI reports<br>
-2- Semantic gap between technical description and high-level attack categorization<br>
-3- Scarcity of useful data<br>
-4- High number of classes (~600 techniques) and an imbalance of data among classes<br>
-<br>
 <b>Approach</b><br>
 1- Automatically collecting representative key phrases from ATT&CK's using semantic role labeling<br>
 2- Finetune a language model using the SIAMESE network to maximize the cosine similarity between phrases extracted from the same techniques and maximize it otherwise<br>
