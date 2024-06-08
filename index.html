@@ -142,10 +142,10 @@
 			<!-- <p> I have contributed to various research and industry projects. Here are some of the disclosed projects:</p> -->
         </div>
 		
-		<div class="project-list">
+		<div id="all_projects" class="project-list">
         
 			<div class="project">
-				<h2 id="CTI_CVE_m_h" class="project-title" onclick="toggleDescription('CTI_CVE_m')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> Mapping CVE and CTI Reports to ATT&CK Using Constructive Learning </h2>
+				<h2 id="CTI_CVE_m_h" class="project-title" onclick="toggleDescription('CTI_CVE_m')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> Classifying Vulnerabilities to Attacking Techniques and Tactics Using Constructive Learning </h2>
 					<div id = "CTI_CVE_m" class="project-description">
 						<p  id="CTI_CVE_m_des" style="flex: 0 0 80%;margin-left: 50px;" > </p>
 						<!-- <img  src="projects/attack_e/img1.png" alt="" style="flex: 0 0 20%;max-width: 100%;height: min-content;margin: 0;"> -->
@@ -154,7 +154,7 @@
 			</div>
 			
 			<div class="project">
-				<h2 id="hullucination_d_h" class="project-title" onclick="toggleDescription('hullucination_d')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> LLM Hullucination Detection</h2>
+				<h2 id="hullucination_d_h" class="project-title" onclick="toggleDescription('hullucination_d')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> Large Language Models Hullucination Detection</h2>
 					<div id = "hullucination_d" class="project-description">
 						<p  id="hullucination_d_des" style="flex: 0 0 80%;margin-left: 50px;" > </p>
 						<!-- <img  src="projects/attack_e/img1.png" alt="" style="flex: 0 0 20%;max-width: 100%;height: min-content;margin: 0;"> -->
@@ -164,7 +164,7 @@
 
 			
 			<div class="project">
-				<h2 id="attack_e_h" class="project-title" onclick="toggleDescription('attack_e')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> Automatic Attack Graph Construction From CTI Reports</h2>
+				<h2 id="attack_e_h" class="project-title" onclick="toggleDescription('attack_e')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> Automatic Attack Graph Construction From Cyber Threat Intelligence Reports</h2>
 					<div id = "attack_e" class="project-description">
 						<p  id="attack_e_des" style="flex: 0 0 80%;margin-left: 50px;" > </p>
 						<!-- <img  src="projects/attack_e/img1.png" alt="" style="flex: 0 0 20%;max-width: 100%;height: min-content;margin: 0;"> -->
@@ -191,7 +191,7 @@
 			</div>
 			
 			<div class="project">
-				<h2 id="cancer_d_h" class="project-title" onclick="toggleDescription('cancer_d')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> Cancer Detection and Classification  in Stained Tissue Biopsies</h2>
+				<h2 id="cancer_d_h" class="project-title" onclick="toggleDescription('cancer_d')">  <i class="fa fa-chevron-right" style="font-size:16px"></i> Cancer Detection and Classification in Stained Tissue Biopsies</h2>
 
 				<div id = "cancer_d" class="project-description">
 					<p id="cancer_d_des" style="flex: 0 0 80%;margin-left: 50px;" > </p>
@@ -216,12 +216,36 @@
 
 		function toggleDescription(id) {
     const description = document.getElementById(id);
-    description.classList.toggle('visible');
-		// Get the <h2> element by its id
+
+	  if (!description.classList.contains('visible')) {
+
+		const descriptions = document.getElementsByClassName('project-description');
+		for (let i = 0; i < descriptions.length; i++) {
+			descriptions[i].classList.remove('visible');
+		}
+		
+		const descriptions2 = document.getElementsByClassName('project-title');
+		for (let i = 0; i < descriptions2.length; i++) {
+			
+			  var iconElement = descriptions2[i].querySelector('i');
+			  iconElement.classList.remove('fa-chevron-down');
+			  iconElement.classList.add('fa-chevron-right');
+		}
+		
+		
+		 description.classList.add('visible');
+
+    }else{
+
+	description.classList.toggle('visible');
+	
+	}
+// Get the <h2> element by its id
   var titleElement = document.getElementById(id+"_h");
 
   // Get the <i> element inside the <h2>
   var iconElement = titleElement.querySelector('i');
+
 
 
   // Toggle the class
@@ -245,8 +269,8 @@
         <div class="section-title">
           <h2>About Me</h2>
 		  <ul>
-			<li style="margin-bottom:8px">An <b>AI consultant</b> who helps <b>startups</b> and <b> businesses</b> developing <b>AI models</b> and integrating <b>LLMs</b> into their workflows </li>
-			<li style="margin-bottom:8px">A <b>PhD Candidate</b> who research <b>LLMs</b> and thier applications in <b>cyber threat intelligence</b> and <b>dynamic cyber deception</b> </li>
+			<li style="margin-bottom:8px">An <b>AI consultant</b>, helping <b>startups</b> and <b> businesses</b> developing <b>AI models</b> and integrating <b>LLMs</b> into their workflows </li>
+			<li style="margin-bottom:8px">A <b>PhD Candidate</b>, researching <b>LLMs</b> and thier applications in <b>cyber threat intelligence</b> and <b>dynamic cyber deception</b> </li>
 			<li style="margin-bottom:8px"> Contributed to projects funded by <b>DARPA</b>, <b>Army Research Office</b>, <b>Office of Naval Research</b>, <b>National Institute of Standards and Technology</b> and <b>National Science Foundation</b>  </li>
 	  </ul>
 
