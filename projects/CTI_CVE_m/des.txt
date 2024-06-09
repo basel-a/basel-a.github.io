@@ -8,8 +8,8 @@ Mapping CVE and CTI reports to ATT&CK enriches them with additional context, acc
 Build a tool that automatically maps CVE and CTI reports to appropriate ATT&CK techniques.<br>
 <br>
 <b>Approach</b><br>
-1- Automatically collecting representative key phrases from ATT&CK's using semantic role labeling<br>
-2- Finetune a language model using the SIAMESE network to maximize the cosine similarity between phrases extracted from the same techniques and maximize it otherwise<br>
+1- Automatically collecting representative key phrases from ATT&CK's using semantic role labeling.<br>
+2- Finetune a language model using the SIAMESE network to maximize the cosine similarity between phrases extracted from the same techniques and maximize it otherwise.<br>
 3- Using the finetuned language model to extract semantically rich embedding of attack sentences and training logistic regression to classify the attack sentences into techniques.<br>
 <br>
 <b>Publications</b><br> 

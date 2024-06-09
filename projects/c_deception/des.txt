@@ -1,11 +1,11 @@
 <b>Motivation</b><br>
-Applying effective cyber deception techniques to Malware requires a high-level characterization of its behavior.  <br>
+Cyber deception aims to divert attackers from real assets, delay their propagation, and discover their approaches.      <br>
 <br>
 <b>Objective</b> <br>
-Developing a model that identifies the behavior of Win32 APIs traces from a malware by linking them to specific techniques in ATT&CK.<br>
+Developing a system that deceives malicious PowerShell scripts to divert attackers from real assets to fake crafted data.<br>
 <br>
 <b>Approach</b> <br>
-1- Building a tool, SODA, that automatically applies deception techniques to Malware using API hooking. <br>
-2- Collecting Win32 API-related data from MSDN, Stack Overflow, and GitHub in a code-description dataset to leverage it in a weakly supervised learning approach <br>
-3- Training a model that uses statistical analysis and language models to analyze an API trace and characterize it to a specific TTP from ATT&CK. <br>
+1- Build a tool that integrates with PowerShell to intercept malicious execution and inject it with deceptive code. <br>
+2- Leverage LLMs to analyze malicious scripts to understand attacker intent and procedures. <br>
+3- Leverage LLMs to generate a deceptive code that provides attackers with convincing fake information. <br>
  

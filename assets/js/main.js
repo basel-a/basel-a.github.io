@@ -312,6 +312,27 @@ fetch('projects/malware_c/des.txt')
     document.getElementById('other_des').innerHTML  = data;
   })
   .catch(error => console.error('Error fetching file:', error));
+  
+   fetch('projects/c_deception/des.txt')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('c_deception_des').innerHTML  = data;
+  })
+  .catch(error => console.error('Error fetching file:', error));
+  
+   fetch('projects/ttp_d/des.txt')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('ttp_d_des').innerHTML  = data;
+  })
+  .catch(error => console.error('Error fetching file:', error));
+  
+   fetch('projects/attack_r/des.txt')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('attack_r_des').innerHTML  = data;
+  })
+  .catch(error => console.error('Error fetching file:', error));
  
 // fetch('projects/attack_e/des.txt')
   // .then(response => response.text())
