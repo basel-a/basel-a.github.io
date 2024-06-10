@@ -66,6 +66,32 @@ h6 {
   opacity: 1;
 }
 
+.flex_type {
+	flex-direction: row !important;
+}
+
+.nav_max_width {
+	max-width:100%
+} 
+.nav_min_width {
+	max-width:0
+} 
+/*--------------------------------------------------------------
+# add
+--------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  .flex_type {
+	flex-direction: column !important;
+}
+.header{
+	max-width:0
+}
+
+
+}
+
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -80,17 +106,20 @@ h6 {
   transition: all 0.5s;
   padding: 0 15px;
   background: #040b14; 
-  height:60px;
+  height: fit-content;
+      /* height: fit-content; */
+
     /* background: #040b14;  */
 
   /* overflow-y: auto; */
 }
 
 #header .profile img {
-  margin: 15px auto;
+  /* margin: 15px auto; */
   display: block;
   width: 120px;
   border: 8px solid #2c2f3f;
+  text-align: center;
 }
 
 #header .profile h1 {
@@ -99,7 +128,7 @@ h6 {
   padding: 0;
   font-weight: 600;
   -moz-text-align-last: center;
-  text-align-last: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
 }
 
@@ -110,9 +139,22 @@ h6 {
   
 }
 
+#hero .dummy {
+	
+	width:10%;
+	
+}
+
+#hero .profile {
+	
+	text-align:center;
+	
+}
 #hero .profile h2 {
   font-size: 32px;
   margin: 0;
+    margin-top:5px;
+
   padding: 0;
   font-weight: 600;
   -moz-text-align-last: center;
@@ -126,7 +168,7 @@ h6 {
   padding: 0;
   font-weight: 600;
   -moz-text-align-last: center;
-  text-align-last: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
   white-space:nowrap;
 }
@@ -165,7 +207,7 @@ h6 {
 
 @media (max-width: 1199px) {
   #header {
-    left: -200px;
+    left: 0;
   }
 
   #main {
@@ -203,8 +245,9 @@ h6 {
   display: flex;
   align-items: center;
   color: #a8a9b4;
-  padding: 12px 15px;
-  margin-bottom: 8px;
+  /* padding: 12px 15px; */
+  padding: 4px 15px;
+  margin-bottom: 4px;
   transition: 0.3s;
   font-size: 15px;
 }
@@ -255,11 +298,15 @@ h6 {
 
 .mobile-nav-active {
   overflow: hidden;
+  
 }
 
 .mobile-nav-active #header {
   left: 0;
+  
 }
+
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -290,11 +337,14 @@ h6 {
 /* } */
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  /* margin: 0 0 10px 0; */
   font-size: 54px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  margin-right:10%;
+  margin-left:10%;
+  text-align:left;
 }
 
 #hero p {
@@ -321,12 +371,16 @@ h6 {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
+	text-align:center;
   }
 
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+  #hero {
+	    height: 75vh;
   }
 }
 
@@ -427,6 +481,7 @@ section {
 	border-radius: 5px; /* 5px rounded corners */
 	  background-color: #e0e9f9;
 	  font-family: "Poppins", sans-serif;
+
 }
 
 .project-title .glyphicon {
@@ -440,7 +495,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #fff;
+  color: #173b6c;
 }
 
 .about .content ul {
