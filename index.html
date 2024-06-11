@@ -463,36 +463,40 @@
         <div class="row" data-aos="fade-in">
 
       
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            
-			<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
+			  <form action="https://usebasin.com/f/b73efeda3354" method="post" id="contactform" class="php-email-form">
+
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <input type="text" name="name" class="form-control" id="name" required placeholder="Your Name">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="email" class="form-control" name="email" id="email" required placeholder="Your Email">
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" required placeholder="AI consultation" >
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" rows="10" required placeholder="Your Message"></textarea >
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+              <!-- <div class="my-3"> -->
+                <!-- <div class="loading">Loading</div> -->
+                <!-- <div class="error-message"></div> -->
+                <!-- <div class="sent-message">Your message has been sent. Thank you!</div> -->
+				    <div id="successMessage" class="sent-message">Your message has been sent. Thank you!</div>
+					<div id="errorMessage" class="sent-message" >There was an error sending the message. Please contact me through <a href="https://www.linkedin.com/in/basel-abdeen/"><b>Linkedin</b></a> or via  <a href="mailto:basel.abdn@gmail.com"> <b>basel.abdn@gmail.com</b> </a> .</div>
+
+
+              <!-- </div> -->
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-          
-		  </div>
+          </div>
 
         </div>
 
@@ -528,10 +532,38 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <script>
+    document.getElementById('contactform').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const url = this.action;
+        
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('errorMessage').style.display = 'none';
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }
+        })
+        .catch(error => {
+            // Log the error for better debugging
+            console.error('Error:', error);
+            document.getElementById('errorMessage').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'none';
+        });
+    });
+</script>
 
 </body>
 
