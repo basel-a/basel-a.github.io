@@ -375,7 +375,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
 	text-align:center;
 	margin: 0 0 0 0;
@@ -383,7 +383,7 @@ h6 {
   }
 
   #hero h2 {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -392,15 +392,15 @@ h6 {
   }
   
   #hero .profile h2 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #hero .profile h5 {
-	font-size: 10px;
+	font-size: 8px;
 
 }
 #header .profile h1 {
-  font-size: 18px;
+  font-size: 16px;
   
 }
 #hero {
