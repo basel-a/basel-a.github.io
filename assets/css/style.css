@@ -153,7 +153,7 @@ h6 {
 #hero .profile h2 {
   font-size: 32px;
   margin: 0;
-    margin-top:5px;
+    margin-top:1px;
 
   padding: 0;
   font-weight: 600;
@@ -375,7 +375,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
 	text-align:center;
 	margin: 0 0 0 0;
@@ -445,13 +445,13 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
   
 }
 @media (max-width: 768px) {
   #hero{
-  padding: 100px 0;
+  padding: 100px 0 30px 0;
   overflow: hidden;
 
 }

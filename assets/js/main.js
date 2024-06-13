@@ -68,7 +68,7 @@
   const scrollto = (el) => {
     let elementPos = select(el).offsetTop
     window.scrollTo({
-      top: elementPos -15,
+      top: elementPos -35,
       behavior: 'smooth'
     })
   }
