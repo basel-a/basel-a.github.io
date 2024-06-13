@@ -2,7 +2,7 @@
 Cyber deception aims to divert attackers from real assets, delay their propagation, and discover their approaches.      <br>
 <br>
 <b>Objective</b> <br>
-Developing a system that deceives malicious PowerShell scripts to divert attackers from real assets to fake crafted data.<br>
+Develop a system that deceives malicious PowerShell scripts to divert attackers from real assets to fake crafted data.<br>
 <br>
 <b>Approach</b> <br>
 1- Build a tool that integrates with PowerShell to intercept malicious execution and inject it with deceptive code. <br>
