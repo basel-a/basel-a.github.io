@@ -546,6 +546,8 @@
             if (response.ok) {
                 document.getElementById('successMessage').style.display = 'block';
                 document.getElementById('errorMessage').style.display = 'none';
+				gtag('event', 'message_me', {});
+
             } else {
                 document.getElementById('errorMessage').style.display = 'block';
                 document.getElementById('successMessage').style.display = 'none';
